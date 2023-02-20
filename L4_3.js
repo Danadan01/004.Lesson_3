@@ -1,11 +1,11 @@
-const answr = prompt("Please put the number of hours you want us to calculate!");
-if (answr) {
-  const num = Number.parseFloat(answr);
-  const result = num * 3600;
-  alert(`You got ${result} seconds in ${answr} hours`);
+const answr = parseFloat(prompt("Please put the number of hours you want us to calculate!"));
+
+if (isNaN(answr)) {
+  alert("Sorry we can't calculate that!")
 
 } else {
-  alert("You haven't put anything!")
+  const result = answr * 3600;
+  alert(`You got ${result} seconds in ${answr} hours`);
 }
 
 
